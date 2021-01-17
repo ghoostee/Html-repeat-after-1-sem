@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>ANIM</title>
+        <style>
+            .wrapper{
+               display: flex;
+               
+               flex-wrap: wrap;
+               height: 100%;
+               width: 100%;
+            }
+            @-webkit-keyframes anim1{
+                0%{height: 300px;width: 300px;}
+                50%{height: 600px;width: 600px;}
+                0%{height: 300px;width: 300px;}
+            }
+            .first{
+                background-image: url(1.gif);
+                background-size: 100% 100%;
+                width: 300px;
+                height: 300px;
+                border: 10px solid rebeccapurple;
+                animation: anim1 3s 100;
+            }
+            @-webkit-keyframes anim2{
+                0%{height: 300px;width: 300px;}
+                50%{height: 600px;width: 600px;}
+                0%{height: 300px;width: 300px;}
+            }
+            .second{
+                width: 300px;
+                height: 300px;
+                background-image: url(2.gif);
+                background-size: 100% 100%;
+                border: 5px solid black;
+            }
+            .wrapper:hover>.second{
+                animation: anim2 3s 100;
+            }
+            @-webkit-keyframes anim3{
+                0%{left:-150px; top: 750px;}
+                50%{top: 100px; width: 300px; height: 300px;}
+                100%{left: 2000px; top: 750px; width: 150px;}
+            }
+            .third{
+                position: absolute;
+                left: -170px;
+                top: 750px;
+                background-image: url(3.gif);
+                background-size: 100% 100%;
+                width: 150px;
+                height: 150px;
+                border: 3px solid black;
+                animation-fill-mode: forwards;
+            }
+            .wrapper:active>.third{
+                animation: anim3 9s 1;
+                
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+           <div class="first"></div>
+           <div class="second"></div>
+           <div class="third"></div>
+        </div>
+    </body>
+</html>

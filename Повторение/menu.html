@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>MENU</title>
+        <style>
+            body{
+                background-color: rgba(173, 44, 162, 0.329);
+                font-family: fantasy;
+            }
+            a:visited{
+                color: blue;
+                text-decoration: none;
+            }
+            a{
+                text-decoration: none;
+            }
+
+
+
+            .block1{    
+                display: flex;
+                justify-content: space-around;  
+            }
+            .block1>div{
+                color: red;
+                font-size: 50px;
+                text-decoration: none;
+                text-align: center;
+            }
+            .block1>div>a:hover{
+                color: red;
+                font-size: 70px;
+            }
+
+
+
+            .block2{
+                display: flex;
+            }
+            .block2>a{
+                color: blue;
+                font-size: 30px;
+                width: 20%;
+                text-align: center;
+                border-right: 2px solid red;
+            }
+            .block2>a:last-child{
+                border-right: none;
+            }
+            .block2>a:hover{
+                color: red;
+                font-size: 40px;
+            }
+
+
+
+            table{
+                width: 100%;
+            }
+            td{
+                font-size: 20px;
+                border-right: 3px solid red;
+                text-align: center;
+            }
+            td:last-child{
+                border-right: none;
+            }
+            td>a:hover{
+                color:red;
+            }
+
+
+            .anim{
+                animation: opas 3s 3;
+            }
+            @keyframes opas{
+                0%{
+                    opacity:1;
+                }
+                50%{
+                    opacity:0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="anim">
+        <!-- простота использования, настройки и обширная возможность расположения блоков. лучший выбор -->
+        <div class="block1">
+            <div><a href="https://flexboxfroggy.com/#ru">Link 1</a></div><div>|</div>
+            <div><a href="https://2ch.hk">Link 2</a></div><div>|</div>
+            <div><a href="https://www.youtube.com/watch?v=Tm0nIvf14Ro">Link 3</a></div><div>|</div>
+            <div><a href="https://coneixelriu.museudelter.cat/ocells.php">Link 4</a></div><div>|</div>
+            <div><a href="https://firstpersontetris.com">Link 5</a></div>
+        </div>
+        <hr>
+        <!-- невозможность определения растояния между ссылками, узкие возможности оформления, простота использования  -->
+        <div class="block2">
+            <a href="https://flexboxfroggy.com/#ru">Link 1</a>
+            <a href="https://2ch.hk">Link 2</a>
+            <a href="https://www.youtube.com/watch?v=Tm0nIvf14Ro">Link 3</a>
+            <a href="https://coneixelriu.museudelter.cat/ocells.php">Link 4</a>
+            <a href="https://firstpersontetris.com">Link 5</a>
+        </div>
+        <hr>
+        <!-- простота использования, возможность настраивания расстояния и неплохие возможности оформления, устарело, плохо подстраивается под ширину контента -->
+        <div>
+            <table>
+                <tr>
+                    <td>
+                            <a href="https://flexboxfroggy.com/#ru">Link 1</a>
+                    </td>
+                    <td>
+                            <a href="https://2ch.hk">Link 2</a>
+                    </td>
+                    <td>
+                            <a href="https://www.youtube.com/watch?v=Tm0nIvf14Ro"">Link 3</a>
+                    </td>
+                    <td>
+                            <a href="https://coneixelriu.museudelter.cat/ocells.php">Link 4</a>
+                    </td>
+                    <td>
+                            <a href="https://firstpersontetris.com">Link 5</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    </div>
+    </body>
+</html>
